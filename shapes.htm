@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <svg class="mainSvg" height="400" width="400">
+    </svg>
+</body>
+<script type="module">
+    (async () => {
+        const svgCanvas = document.getElementsByClassName("mainSvg")[0];
+        const svgModule = await import("./svg.mjs");
+        const svg = new svgModule.Svg(svgCanvas);
+        svg.draw();
+    })();
+</script>
+
+</html>
